@@ -14,12 +14,12 @@ Just `docker build` and you'll get a `hebcal` image that will work anywhere you 
     docker run hebcal ...
 
 To build for a default city other than `New York`, just add a
-`--build-arg "HEBCAL_CITY=${CITY}"` flag. For details on cities at both build-time and
+`--build-arg "DEFAULT_CITY=${CITY}"` flag. For details on cities at both build-time and
 runtime, see:
 
 - https://github.com/hebcal/hebcal#build--install
 - https://github.com/hebcal/hebcal#candle-lighting-times
 
 Alternatively change city at runtime:
-`docker run -e HEBCAL_CITY="${CITY}" --rm hebcal...`
+`docker run -e DEFAULT_CITY="${CITY}" --rm hebcal...`
 `docker run --rm hebcal -C ${CITY} ...`
